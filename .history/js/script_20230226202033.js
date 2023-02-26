@@ -53,6 +53,12 @@ function getTimeOfDay() {
         greeting.textContent = 'Good Evening';
     }
 }
+function setName(e) {
+    if(e.type === 'keypress') {
+        if (e.which == 13 || e.keyCode)
+    }
+
+  }
 function getName() {
     if(localStorage.getItem('name' === null)) {
         name.textContent = 'Enter Name';
@@ -60,17 +66,6 @@ function getName() {
         name.textContent = localStorage.getItem('name');
     }
 }
-function setName(e) {
-    if(e.type === 'keypress') {
-        if (e.which == 13 || e.keyCode == 13) {
-            localStorage.setItem('name', e.target.innerText);
-        } else {
-            localStorage.setItem('name', e.target.innerText);
-        }
-    }
-
-  }
-
 function getLocalStorage() {
     if(localStorage.getItem('name')) {
         name.value = localStorage.getItem('name');

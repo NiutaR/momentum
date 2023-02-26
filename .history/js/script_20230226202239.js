@@ -53,13 +53,7 @@ function getTimeOfDay() {
         greeting.textContent = 'Good Evening';
     }
 }
-function getName() {
-    if(localStorage.getItem('name' === null)) {
-        name.textContent = 'Enter Name';
-    } else {
-        name.textContent = localStorage.getItem('name');
-    }
-}
+
 function setName(e) {
     if(e.type === 'keypress') {
         if (e.which == 13 || e.keyCode == 13) {

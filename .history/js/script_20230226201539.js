@@ -30,7 +30,7 @@ function showTime() {
     setTimeout(showTime, 1000);
 
 }
-
+showTime();
 
 function addZero(n) {
     return (parseInt(n, 10) < 10 ? '0' : '') + n;
@@ -53,38 +53,11 @@ function getTimeOfDay() {
         greeting.textContent = 'Good Evening';
     }
 }
-function getName() {
-    if(localStorage.getItem('name' === null)) {
-        name.textContent = 'Enter Name';
-    } else {
-        name.textContent = localStorage.getItem('name');
-    }
-}
-function setName(e) {
-    if(e.type === 'keypress') {
-        if (e.which == 13 || e.keyCode == 13) {
-            localStorage.setItem('name', e.target.innerText);
-        } else {
-            localStorage.setItem('name', e.target.innerText);
-        }
-    }
-
-  }
-
-function getLocalStorage() {
-    if(localStorage.getItem('name')) {
-        name.value = localStorage.getItem('name');
-    }
-}
-window.addEventListener('load', getLocalStorage);
+const timeOfDay = getTimeOfDay();
+const greetingText = `${timeOfDay}`;
 
 function setLocalStorage() {
     localStorage.setItem('name', name.value);
 }
 window.addEventListener('beforeunload', setLocalStorage);
-
-const timeOfDay = getTimeOfDay();
-const greetingText = `${timeOfDay}`;
-showTime();
-getName();
 

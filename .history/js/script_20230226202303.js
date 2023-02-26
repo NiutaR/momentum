@@ -71,7 +71,7 @@ function setName(e) {
 
   }
 
-function getLocalStorage() {
+/*function getLocalStorage() {
     if(localStorage.getItem('name')) {
         name.value = localStorage.getItem('name');
     }
